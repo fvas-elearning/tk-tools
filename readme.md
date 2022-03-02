@@ -2,12 +2,12 @@
 
 __Project:__ Tropotek Toolbox  
 __Published:__ 01 Jan 2014  
-__Web:__ <https://github.com/tropotek/tk-tools>  
+__Web:__ <https://github.com/fvas-elearning/tk-tools>  
 __Authors:__ Michael Mifsud <http://www.tropotek.com/>  
 
 
 This projects contains a number of tools that are handy when developing projects with 
-the tk-libs and using Tropoteks git tag and release system.
+the tk-libs and using Tropotek`s git tag and release system.
 
 
 ## Contents
@@ -20,7 +20,7 @@ the tk-libs and using Tropoteks git tag and release system.
 Requirements
 ============
 
- - PHP5.3+ (CLI)
+ - PHP7.1+ (CLI)
 
 
 
@@ -29,7 +29,7 @@ Requirements
 Installation
 ============
 
- 1. Download the source files to somewhere accessable on your server .
+ 1. Download the source files to somewhere accessible on your server .
  2. Run `composer.phar install`
  3. cd into the bin directory and run `sudo ./install-cmd` to install for all users.  
     Optionally ignore the sudo and the commands will be installed into the user bin directory.
