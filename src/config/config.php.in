@@ -9,7 +9,7 @@ $config = \Tk\Config::getInstance();
 /*
  * Vendor paths to look for libs we manage
  */
-$config['vendor.paths'] = array('/vendor/fvas', '/vendor/ttek', '/vendor/tropotek', '/assets', '/plugin', '/html');
+$config['vendor.paths'] = array('/vendor/uom', '/vendor/ttek', '/vendor/tropotek', '/assets', '/plugin', '/html');
 
 /*
  *File to ignore when we are doing a comparison from this repo to the remote repo
