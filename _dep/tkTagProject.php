@@ -36,10 +36,11 @@ $packagePrefixList = array(
     'ttek-asset'    => 'assets',
     'ttek-plg'      => 'plugin',
 
-    'fvas'          => 'vendor/fvas',
-    'fvas-plugin'   => 'plugin',
-    'fvas-theme'    => 'theme',
-    'fvas-asset'    => 'assets',
+    'uom'          => 'vendor/uom',
+    'uom-plugin'   => 'plugin',
+    'uom-theme'    => 'theme',
+    'uom-asset'    => 'assets',
+    'uom-plg'      => 'plugin',
 
     'unimelb'       => 'vendor',
     'unimelb-plg'   => 'plugin',
