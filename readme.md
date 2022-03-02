@@ -2,12 +2,12 @@
 
 __Project:__ Tropotek Toolbox  
 __Published:__ 01 Jan 2014  
-__Web:__ <https://github.com/tropotek/tk-tools>  
+__Web:__ <https://github.com/fvas-elearning/tk-tools>  
 __Authors:__ Michael Mifsud <http://www.tropotek.com/>  
 
 
 This projects contains a number of tools that are handy when developing projects with 
-the tk-libs and using Tropoteks git tag and release system.
+the tk-libs and using Tropotek`s git tag and release system.
 
 
 ## Contents

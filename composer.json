@@ -1,5 +1,5 @@
 {
-  "name": "ttek/tk-tools",
+  "name": "uom/tk-tools",
   "type": "project",
   "description": "Tk lib framework commands.",
   "keywords": [
@@ -12,7 +12,6 @@
   "authors": [
     {
       "name": "Michael Mifsud",
-      "email": "info@tropotek.com.au",
       "homepage": "http://www.tropotek.com/"
     }
   ],
@@ -24,9 +23,9 @@
   },
   "require": {
     "php": "^7.1|^8.0",
-    "ttek/tk-framework": "~3.0.0",
-    "ttek/tk-database": "~3.2.0",
-    "ttek/tk-mvc": "~3.2.0",
+    "uom/tk-framework": "~3.0.0",
+    "uom/tk-database": "~3.2.0",
+    "uom/tk-mvc": "~3.2.0",
     "ext-json": "*"
   },
   "extra": {
