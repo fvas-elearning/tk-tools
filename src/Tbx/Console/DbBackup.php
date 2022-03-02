@@ -13,7 +13,7 @@ use Symfony\Component\Console\Input\InputOption;
  */
 class DbBackup extends Iface
 {
-    
+
     /**
      *
      */
@@ -29,6 +29,7 @@ class DbBackup extends Iface
             ->addOption('name', 'N', InputOption::VALUE_OPTIONAL, 'The database name to dump, if none then all available databases are dumped', '')
             ->addOption('path', 'p', InputOption::VALUE_OPTIONAL, 'The path to save the archive.', $this->getCwd())
             ->addOption('backupName', 'B', InputOption::VALUE_OPTIONAL, 'the name of the archive', 'dbBackup-' . $timestamp)
+            //->addOption('user', 'U', InputOption::VALUE_OPTIONAL, 'The database username.', 'dev')
             ->setDescription('Backup all tables in a DB');
     }
 
@@ -66,20 +67,21 @@ class DbBackup extends Iface
 
         foreach ($databaseList as $dbName) {
             if (in_array($dbName, $exclude)) continue;
-            $this->writeStrong($dbName);
+            $this->writeStrong($dbName, OutputInterface::VERBOSITY_VERBOSE);
             $options['name'] = $dbName;
             $db = \Tk\Db\Pdo::create($options);
             \Tk\Util\SqlBackup::create($db)->save($backupDir.'/'.$dbName.'.sql');
         }
 
         $cmd = sprintf('cd %s && tar zcf %s %s ', $tempPath, basename($archivePath), basename($backupDir));
-        $this->writeComment($cmd);
+        $this->writeComment($cmd,OutputInterface::VERBOSITY_VERBOSE);
         system($cmd);
 
         $cmd = sprintf('mv %s %s ', $archivePath, $options['path']);
-        $this->writeComment($cmd);
+        $this->writeComment($cmd,OutputInterface::VERBOSITY_VERBOSE);
         system($cmd);
 
+        $this->write($options['path'].'/'.basename($archivePath));
         \Tk\File::rmdir($tempPath);
     }
 

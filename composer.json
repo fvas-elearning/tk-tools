@@ -22,10 +22,15 @@
     }
   },
   "require": {
-    "php": "^7.1.3",
+    "php": "^7.1|^8.0",
     "uom/tk-framework": "~3.0.0",
-    "uom/tk-database": "~3.0.0",
-    "uom/tk-mvc": "~3.0.0",
+    "uom/tk-database": "~3.2.0",
+    "uom/tk-mvc": "~3.2.0",
     "ext-json": "*"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.2.x-dev"
+    }
   }
 }

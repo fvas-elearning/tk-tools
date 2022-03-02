@@ -39,6 +39,8 @@ class TagShow extends Iface
             throw new \Tk\Exception('Not a GIT repository: ' . $this->getCwd());
 
         $sformat = '<info>%-25s</info> <comment>%-12s %-12s</comment>';
+        $this->getOutput()->writeln(sprintf('<fg=magenta>%-25s</> <fg=magenta>%-12s %-12s</>', 'package', 'curr', 'next'));
+
         $vcs = \Tbx\Git::create($this->getCwd(), $input->getOptions());
         $vcs->setInputOutput($input, $output);
         $tag = $vcs->getCurrentTag($vcs->getBranchAlias());
@@ -59,6 +61,8 @@ class TagShow extends Iface
                         $v->setInputOutput($this->getInput(), $this->getOutput());
                         $tag = $v->getCurrentTag($v->getBranchAlias());
                         $nextTag = $v->lookupNextTag($tag);
+                        if ($tag == $nextTag)
+                            $nextTag = '';
                         $this->getOutput()->writeln(sprintf($sformat, $v->getName(), $tag, $nextTag));
                     } catch (\Exception $e) {
                         $this->writeError($e->getMessage());

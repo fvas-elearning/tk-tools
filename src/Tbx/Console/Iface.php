@@ -38,6 +38,7 @@ abstract class Iface extends \Tk\Console\Console
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        chdir($this->getCwd());
         $this->setInput($input);
         $this->setOutput($output);
     }
