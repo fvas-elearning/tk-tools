@@ -23,9 +23,9 @@
   },
   "require": {
     "php": "^7.1|^8.0",
-    "uom/tk-framework": "~3.0.0",
-    "uom/tk-database": "~3.2.0",
-    "uom/tk-mvc": "~3.2.0",
+    "uom/tk-framework": "~3.2.0",
+    "uom/tk-database": "~3.4.0",
+    "uom/tk-mvc": "~3.4.0",
     "ext-json": "*"
   },
   "extra": {
